@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "cable xr",
+    "precio": 25,
+    "cantidad": 5
+  },
+  {
+    "id": 2,
+    "nombre": "puas james",
+    "precio": 5.5,
+    "cantidad": 2
+  },
+  {
+    "id": 3,
+    "nombre": "guitarra ibanez",
+    "precio": 20700,
+    "cantidad": 34
+  },
+  {
+    "id": 4,
+    "nombre": "pedal boss",
+    "precio": 542,
+    "cantidad": 68
+  },
+  {
+    "id": 5,
+    "nombre": "bajo gibson",
+    "precio": 84632,
+    "cantidad": 200
+  },
+  {
+    "nombre": "pascuas",
+    "precio": 50,
+    "cantidad": 8,
+    "id": 6
+  },
+  {
+    "nombre": "papas",
+    "precio": 58,
+    "cantidad": 532,
+    "id": 7
+  },
+  {
+    "nombre": "arroz",
+    "precio": 150,
+    "cantidad": 20,
+    "id": 8
+  }
+]
