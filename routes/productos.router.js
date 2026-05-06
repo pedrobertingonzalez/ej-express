@@ -1,5 +1,6 @@
 const express = require ('express');
 const router = express.Router();
+const axios = require('axios');
 
 const {
     leerProductos,
@@ -7,6 +8,18 @@ const {
     venderProducto,
     obtenerStockBajo
 } = require ('../services/stock.services');
+
+router.get('/precio-dolar', async (req, res, next)=>{
+    try{
+        const {data} = await axios.get('https://dolarapi.com/v1/dolares');
+        res.status(200).json({data});
+    }catch(error){
+        next(error);
+    }
+});
+
+
+
 
 router.get('/', async (req, res, next)=>{
     try {
