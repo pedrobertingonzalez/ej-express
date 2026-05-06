@@ -31,15 +31,21 @@ async function crearProductos(nuevoProducto){
     const productos = await leerProductos();
 
     if(!nuevoProducto.nombre){
-        throw new Error("Falta el nombre del producto");
+        const error = new Error('Falta el nombre del producto');
+        error.status = 400;
+        throw error;
     }
 
     if(nuevoProducto.precio <= 0 || typeof nuevoProducto.precio !== "number") {
-        throw new Error("el precio es incorrecto");
+        const error = new Error('El precio es incorrecto');
+        error.status = 400;
+        throw error;
     }
 
     if(nuevoProducto.cantidad <= 0){
-        throw new Error("La cantidad es incorrecta");
+        const error = new Error('La cantidad es incorrecta');
+        error.status = 400;
+        throw error;
     }
 
     const maxId = productos.reduce((max, p) => {
@@ -67,12 +73,16 @@ async function venderProducto(id, cantidad){
     });
 
         if(!buscarPorId){
-        throw new Error ("No se ha encontrado el producto");
+        const error = new Error('No se ha encontrado el producto');
+        error.status = 400;
+        throw error;
     }
 
 
     if(buscarPorId.cantidad < cantidad){
-        throw new Error ("no hay stock disponible");
+        const error = new Error('No hay stock disponible');
+        error.status=400;
+        throw error;
     }
 
     buscarPorId.cantidad -= cantidad;

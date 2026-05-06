@@ -12,6 +12,9 @@ const productosRouter = require('./routes/productos.router');
 app.use('/productos', productosRouter);
 
 
+// SIEMPRE ANTES DEL APP.LISTEN Y DESPUES DE TODAS LAS RUTAS PARA ATRAPAR CUALQUIER ERROR
+const errorHandler = require('./middlewares/errorHandler');
+app.use(errorHandler);
 
 // SIEMPRE AL FINAL
 app.listen(process.env.PORT, () =>{
