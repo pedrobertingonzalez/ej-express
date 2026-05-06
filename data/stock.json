@@ -15,7 +15,7 @@
     "id": 3,
     "nombre": "guitarra ibanez",
     "precio": 20700,
-    "cantidad": 34
+    "cantidad": 31
   },
   {
     "id": 4,
@@ -46,5 +46,11 @@
     "precio": 150,
     "cantidad": 20,
     "id": 8
+  },
+  {
+    "nombre": "guitarra coocoo",
+    "precio": 20145,
+    "cantidad": 267,
+    "id": 9
   }
 ]
